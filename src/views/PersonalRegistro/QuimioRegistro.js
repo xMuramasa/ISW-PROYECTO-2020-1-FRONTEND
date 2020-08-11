@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 
 import Quimio from "../../components/form/Quimio";
 
-import QuimioService from '../../services/personal.service';
-
-
-
+import QuimioService from '../../services/quimio.service';
 
 class QuimioRegistro extends Component { //transforma la clase en componente
 
@@ -16,9 +13,9 @@ class QuimioRegistro extends Component { //transforma la clase en componente
     }
 
     handleQuimioSubmit(data) {
-        QuimioService.create(data)
+        QuimioService.createPersonalQuimioterapia(data)
             .then((response) => console.log(response))
-            .catch((error) => console.log(error));
+            .catch((error) => alert(error));
     }
 
 
@@ -36,7 +33,7 @@ class QuimioRegistro extends Component { //transforma la clase en componente
                         </div>
                     </div>
                 </header>
-                <Quimio onSubmit={this.handleQuimioSubmit}></Quimio>
+                <Quimio onSubmit={ this.handleQuimioSubmit}></Quimio>
             </div>
         );
     }

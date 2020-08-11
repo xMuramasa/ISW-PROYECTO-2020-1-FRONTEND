@@ -2,8 +2,16 @@ import { api } from '../helpers';
 
 const basePath = '/personal/recuperacion';
 
+function show_id(recuperacionId) {
+    return api.get(`${basePath}/${recuperacionId}`)
+}
+
 function getAllPersonalRecup(recuperacionId) {
     return api.get(`${basePath}/getAllRecuperacion/${recuperacionId}`);
+}
+
+function getAllRecuperacion() {
+    return api.get(`${basePath}/getAllRecuperacion/todos`);
 }
 
 function borrarPersonalRecup(recuperacionId) {
@@ -16,8 +24,10 @@ function createPersonalRecup(data) {
 
 const RecuperacionService = {
     getAllPersonalRecup,
-    borrarPersonalRecup,
     createPersonalRecup,
+    borrarPersonalRecup,
+    getAllRecuperacion,
+    show_id
 };
 
 export default RecuperacionService;

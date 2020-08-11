@@ -22,21 +22,19 @@ const Quimio = ({ //funcion
             </div>
 
           <div className="col-md-6 mb-3">
-            <label htmlFor="validationTooltip02">Recuperacion ID</label>
+            <label htmlFor="validationTooltip02">Quimioterapia ID</label>
             <input value={quimioId} type="text" onChange={(event) => setQuimioId(event.target.value)} className="form-control" id="validation02" placeholder="Ej: Número" />
           </div>
         </div>
 
         {/* {console.log(programa_de_salud)} */}
         <button
-        onClick={(event) => onSubmit({'personalId': personalId,'quimioterapiaId': quimioId,'id': null})} 
+          onClick={(event) => onSubmit({ 'personalId': personalId,'quimioterapiaId': quimioId})} 
         className="btn btn-primary">Asignar</button>
         </form>
     );
   }
 
-
-  
 Quimio.propTypes = {
   onSubmit: PropTypes.func,
 }

@@ -31,7 +31,7 @@ const Recuperacion = ({ //funcion
         {/* {console.log(programa_de_salud)} */}
         <button
         onClick={(event) => onSubmit({'personalId': personalId,'recuperacionId': recuperacionId,})} 
-        className="btn btn-primary">Registrar</button>
+        className="btn btn-primary">Asignar</button>
         </form>
     );
   }

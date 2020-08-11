@@ -4,9 +4,6 @@ import Recuperacion from "../../components/form/Recup";
 
 import RecuperacionService from '../../services/recup.service';
 
-
-
-
 class RecuperacionRegistro extends Component{ //transforma la clase en componente
 
     constructor(props) {

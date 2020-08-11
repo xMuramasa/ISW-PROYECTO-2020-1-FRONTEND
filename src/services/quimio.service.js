@@ -2,8 +2,16 @@ import { api } from '../helpers';
 
 const basePath = '/personal/quimioterapia';
 
-function getAllPersonalQuimioterapia() {
+function show_id(quimioterapiaId) {
+    return api.get(`${basePath}/${quimioterapiaId}`)
+}
+
+function getAllPersonalQuimioterapia(quimioterapiaId) {
     return api.get(`${basePath}/getAllQuimioterapia/${quimioterapiaId}`);
+}
+
+function getAllQuimioterapia() {
+    return api.get(`${basePath}/getAllQuimioterapia/todos`);
 }
 
 function borrarPersonalQuimioterapia(id) {
@@ -14,10 +22,12 @@ function createPersonalQuimioterapia(data) {
     return api.post(`${basePath}/`, data);
 }
 
-const QuimioterapiaService = {
+const QuimioService = {
     getAllPersonalQuimioterapia,
     createPersonalQuimioterapia,
     borrarPersonalQuimioterapia,
+    getAllQuimioterapia,
+    show_id
 };
 
 export default QuimioService;

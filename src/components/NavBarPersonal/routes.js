@@ -5,8 +5,24 @@ export default function () {
             path: '/'
         },
         {
+            name: 'Portal Personal Quimioterapia',
+            path: '/PPQuimioterapia'
+        },
+        {
+            name: 'Portal Personal Recuperacion',
+            path: '/PPRecuperacion'
+        },
+        {
+            name: 'Portal Personal Pabellones',
+            path: '/PPPabelones'
+        },
+        {
             name: 'Buscar Personal',
             path: '/buscar'
+        },
+        {
+            name: 'Buscar Personal En Quimioterapia',
+            path:'buscarQuimio'
         },
         {
             name: 'Agregar Personal',

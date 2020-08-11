@@ -7,16 +7,24 @@ import history from './helpers/history'
 import Navbar from './components/navbar'; //si es javascript no es necesario que sea .js
 import Tables from './components/tables';
 import NavBarPersonal from './components/NavBarPersonal/NavBarPersonal'
+
 import PersonalRegistro from './views/PersonalRegistro/PersonalRegistro'
 import PabellonRegistro from './views/PersonalRegistro/PabRegistro'
 import QuimioRegistro from './views/PersonalRegistro/QuimioRegistro'
 import RecuperacionRegistro from './views/PersonalRegistro/RecupRegistro'
 
 import PersonalBuscar from './views/PersonalBuscar/PersonalBuscar'
+import QuimioBuscar from './views/PersonalBuscar/QuimioBuscar'
+//import PabellonBuscar from './views/PersonalBuscar/PabeBuscar'
+//import RecuperacionBuscar from './views/PersonalBuscar/RecupBuscar'
 
 //bootstrappp
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+
+import tablesQuimio from './components/tablesQuimio';
+import tablesRecuperacion from './components/tablesRecup';
+import PabellonTables from './components/tablesPab';
 
 function App() {
   return (
@@ -40,6 +48,10 @@ function App() {
           component={PersonalBuscar}
         />
           <Route
+            path='/buscarQuimio'
+            component={QuimioBuscar}
+          />
+          <Route
             path='/AsignarQuimioterapia'
             component={QuimioRegistro}
           />
@@ -51,7 +63,21 @@ function App() {
             path='/AsignarPabellones'
             component={PabellonRegistro}
           />
-
+          <Route
+            exact
+            path='/PPQuimioterapia'
+            component={tablesQuimio}
+          />
+          <Route
+            exact
+            path='/PPRecuperacion'
+            component={tablesRecuperacion}
+          />
+          <Route
+            exact
+            path='/PPPabelones'
+            component={PabellonTables}
+          />
       </Switch>
     </div>
   </Router>
