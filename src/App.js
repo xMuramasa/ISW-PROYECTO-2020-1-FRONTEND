@@ -8,6 +8,10 @@ import Navbar from './components/navbar'; //si es javascript no es necesario que
 import Tables from './components/tables';
 import NavBarPersonal from './components/NavBarPersonal/NavBarPersonal'
 import PersonalRegistro from './views/PersonalRegistro/PersonalRegistro'
+import PabellonRegistro from './views/PersonalRegistro/PabRegistro'
+import QuimioRegistro from './views/PersonalRegistro/QuimioRegistro'
+import RecuperacionRegistro from './views/PersonalRegistro/RecupRegistro'
+
 import PersonalBuscar from './views/PersonalBuscar/PersonalBuscar'
 
 //bootstrap
@@ -35,6 +39,19 @@ function App() {
           path='/buscar'
           component={PersonalBuscar}
         />
+          <Route
+            path='/AsignarQuimioterapia'
+            component={QuimioRegistro}
+          />
+          <Route
+            path='/AsignarRecuperacion'
+            component={RecuperacionRegistro}
+          />
+          <Route
+            path='/AsignarPabellones'
+            component={PabellonRegistro}
+          />
+
       </Switch>
     </div>
   </Router>
