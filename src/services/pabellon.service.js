@@ -27,7 +27,7 @@ const PabellonService = {
     createPersonalPabellon,
     borrarPersonalPabellon,
     getAllPabellon,
-    show_id,
+    show_id
 };
 
 export default PabellonService;

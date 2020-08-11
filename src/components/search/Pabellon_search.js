@@ -5,21 +5,21 @@ import PropTypes from "prop-types";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-import PabellonService from '../../services/Pabellon.service';
+import PabellonService from '../../services/pabellon.service';
 
 import { useList } from 'react-hooks-lib'
 
 const Pabellon_search = ({
     onSubmit
 }) => {
-
+    // const {quimios,push,set} = useList([]);
     const [state, setState] = useState([]);
     const [param, setParam] = useState('Escoge uno');
     const [valor, setValor] = useState('');
-
+    // const [quimios = [], setQuimios] = useState('');
 
     const options = [
-        'Id'
+        'Id Sala Pabellon'
     ];
 
     const onSelect = (event) => {
@@ -32,7 +32,7 @@ const Pabellon_search = ({
     const showPabellon = (event) => {
         event.preventDefault();
         switch (param) {
-            case 'Id':
+            case 'Id Sala Pabellon':
                 PabellonService.show_id(valor).then((response) => {
                     setState(
                         response.status === 200 ? [response.data] : [],
@@ -66,7 +66,7 @@ const Pabellon_search = ({
                             <th scope="col">#</th>
                             <th scope="col">Id</th>
                             <th scope="col">Personal ID</th>
-                            <th scope="col">Sala Pabellon ID</th>
+                            <th scope="col">Pabellon ID</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,12 +76,12 @@ const Pabellon_search = ({
                                     <React.Fragment>
                                         <th scope="row">{index + 1}</th>
                                         <td>{pabellon.id}</td>
-                                        <td>{pabellon.pabellonId}</td>
                                         <td>{pabellon.personalId}</td>
+                                        <td>{pabellon.pabellonId}</td>
                                         {/* <td>
-                                    <a  href="#" className="btn btn-warning" onClick={()=>console.log(personal)}> Editar </a>
+                                    <a  href="#" className="btn btn-warning" onClick={()=>console.log(quimio)}> Editar </a>
                                     
-                                    <a  onClick={()=>this.deletePersonal(personal.id)}
+                                    <a  onClick={()=>this.deleteQuimio(quimio.id)}
                                         href="#" className="btn btn-danger"> Borrar </a>
 
                                 </td> */}

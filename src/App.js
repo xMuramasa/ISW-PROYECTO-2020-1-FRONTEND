@@ -9,13 +9,13 @@ import Tables from './components/tables';
 import NavBarPersonal from './components/NavBarPersonal/NavBarPersonal'
 
 import PersonalRegistro from './views/PersonalRegistro/PersonalRegistro'
-import PabellonRegistro from './views/PersonalRegistro/PabRegistro'
+import PabellonRegistro from './views/PersonalRegistro/PabellonRegistro'
 import QuimioRegistro from './views/PersonalRegistro/QuimioRegistro'
 import RecuperacionRegistro from './views/PersonalRegistro/RecupRegistro'
 
 import PersonalBuscar from './views/PersonalBuscar/PersonalBuscar'
 import QuimioBuscar from './views/PersonalBuscar/QuimioBuscar'
-//import PabellonBuscar from './views/PersonalBuscar/PabeBuscar'
+import PabellonBuscar from './views/PersonalBuscar/PabellonBuscar'
 //import RecuperacionBuscar from './views/PersonalBuscar/RecupBuscar'
 
 //bootstrappp
@@ -24,7 +24,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import tablesQuimio from './components/tablesQuimio';
 import tablesRecuperacion from './components/tablesRecup';
-import PabellonTables from './components/tablesPab';
+import tablesPabellon from './components/tablesPabellon';
 
 function App() {
   return (
@@ -47,36 +47,44 @@ function App() {
           path='/buscar'
           component={PersonalBuscar}
         />
-          <Route
-            path='/buscarQuimio'
-            component={QuimioBuscar}
-          />
+          
+          
           <Route
             path='/AsignarQuimioterapia'
             component={QuimioRegistro}
           />
           <Route
-            path='/AsignarRecuperacion'
-            component={RecuperacionRegistro}
-          />
-          <Route
-            path='/AsignarPabellones'
-            component={PabellonRegistro}
+            path='/buscarQuimio'
+            component={QuimioBuscar}
           />
           <Route
             exact
             path='/PPQuimioterapia'
             component={tablesQuimio}
           />
+
+
           <Route
-            exact
-            path='/PPRecuperacion'
-            component={tablesRecuperacion}
-          />
+            path='/AsignarRecuperacion'
+            component={RecuperacionRegistro}
+            />
+
+          <Route
+          exact
+          path='/PPRecuperacion'
+          component={tablesRecuperacion}
+        />
+
+
+          <Route
+            path='/AsignarPabellones'
+            component={PabellonRegistro}
+            />
+
           <Route
             exact
             path='/PPPabelones'
-            component={PabellonTables}
+            component={tablesPabellon}
           />
       </Switch>
     </div>

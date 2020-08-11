@@ -33,7 +33,7 @@ const Recuperacion_search = ({
             event.preventDefault();
             switch(param){
                 case 'Id': 
-                recuperacionService.show_id(valor).then((response)=>{
+                recupService.show_id(valor).then((response)=>{
                     setState(
                         response.status === 200 ? [response.data] : [],
                     );
