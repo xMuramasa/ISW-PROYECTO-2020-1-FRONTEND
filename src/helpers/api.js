@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const endpoints = {
-    //development: 'https://isw-proyecto.herokuapp.com/',
-     development: 'http://localhost:8000/',
+    development: 'https://isw-proyecto.herokuapp.com/',
+     //development: 'http://localhost:8000/',
 };
 
 export const api = axios.create({
