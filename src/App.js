@@ -14,7 +14,7 @@ import RecuperacionRegistro from './views/PersonalRegistro/RecupRegistro'
 
 import PersonalBuscar from './views/PersonalBuscar/PersonalBuscar'
 
-//bootstrap
+//bootstrappp
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 

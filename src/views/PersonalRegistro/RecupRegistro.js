@@ -30,7 +30,7 @@ class RecuperacionRegistro extends Component{ //transforma la clase en component
                 <div className="container h-100">
                      <div className="row h-100 align-items-center">
                         <div id="titulo" className="col-12 text-center">
-                            <h1 className="font-weight-light">Registro Personal Recuperacion</h1>
+                            <h1 className="font-weight-light">Asignación Personal a Sala de Recuperacion</h1>
                             <p className="lead">Ingresa los datos del Personal Recuperacion en el siguiente formulario</p>
                         </div>
                     </div>
