@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import recupService from '../services/recup.service';
+import RecuperacionService from '../services/recuperacion.service';
 
 class tablesRecuperacion extends Component { //transforma la clase en componente
 
@@ -12,7 +12,7 @@ class tablesRecuperacion extends Component { //transforma la clase en componente
     }
 
     componentDidMount() { //es llamado la primera vez que la vista es renderizada (se llama 1 vez)
-        recupService.getAllRecuperacion().then((response) => {
+        RecuperacionService.getAllRecuperacion().then((response) => {
             this.setState({
                 recuperacion: response.status === 200 ? response.data : [],
             })
@@ -20,7 +20,7 @@ class tablesRecuperacion extends Component { //transforma la clase en componente
     }
 
     deleteRecuperacion(id) {
-        recupService.borrarPersonalRecuperacion(id)
+        RecuperacionService.borrarPersonalRecuperacion(id)
             .then(response => {
                 console.log(response.data);
                 this.props.history.push('/') //me lleva a la ruta "/"
@@ -41,7 +41,7 @@ class tablesRecuperacion extends Component { //transforma la clase en componente
                             <th scope="col">#</th>
                             <th scope="col">Id</th>
                             <th scope="col">Personal ID</th>
-                            <th scope="col">Sala Recuperacion ID</th>
+                            <th scope="col">Recuperacion ID</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,7 +56,6 @@ class tablesRecuperacion extends Component { //transforma la clase en componente
                                         <td>
                                             <a onClick={() => this.deleteRecuperacion(recuperacion.personalId)}
                                                 href="#" className="btn btn-danger"> Borrar </a>
-
                                         </td>
                                     </React.Fragment>
                                 </tr>

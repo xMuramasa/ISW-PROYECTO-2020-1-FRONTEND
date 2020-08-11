@@ -25,6 +25,14 @@ export default function () {
             path:'buscarQuimio'
         },
         {
+            name: 'Buscar Personal En Recuperacion',
+            path: 'buscarRecuperacion'
+        },
+        {
+            name: 'Buscar Personal En Pabellones',
+            path: 'buscarPabellon'
+        },
+        {
             name: 'Agregar Personal',
             path: '/registro'
         },

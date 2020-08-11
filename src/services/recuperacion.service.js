@@ -6,7 +6,7 @@ function show_id(recuperacionId) {
     return api.get(`${basePath}/${recuperacionId}`)
 }
 
-function getAllPersonalRecup(recuperacionId) {
+function getAllPersonalRecuperacion(recuperacionId) {
     return api.get(`${basePath}/getAllRecuperacion/${recuperacionId}`);
 }
 
@@ -14,18 +14,18 @@ function getAllRecuperacion() {
     return api.get(`${basePath}/getAllRecuperacion/todos`);
 }
 
-function borrarPersonalRecup(recuperacionId) {
-    return api.delete(`${basePath}/${recuperacionId}`);
+function borrarPersonalRecuperacion(id) {
+    return api.delete(`${basePath}/${id}`);
 }
 
-function createPersonalRecup(data) {
+function createPersonalRecuperacion(data) {
     return api.post(`${basePath}/`, data);
 }
 
 const RecuperacionService = {
-    getAllPersonalRecup,
-    createPersonalRecup,
-    borrarPersonalRecup,
+    getAllPersonalRecuperacion,
+    createPersonalRecuperacion,
+    borrarPersonalRecuperacion,
     getAllRecuperacion,
     show_id
 };

@@ -11,7 +11,6 @@ const Recuperacion = ({ //funcion
     const [personalId, setPersonalId] = useState('');
     const [recuperacionId, setRecuperacionId] = useState('');
 
-
   
     return(
         <form className="needs-validation" noValidate>
@@ -30,14 +29,12 @@ const Recuperacion = ({ //funcion
 
         {/* {console.log(programa_de_salud)} */}
         <button
-        onClick={(event) => onSubmit({'personalId': personalId,'recuperacionId': recuperacionId,})} 
+          onClick={(event) => onSubmit({ 'personalId': personalId,'recuperacionId': recuperacionId})} 
         className="btn btn-primary">Asignar</button>
         </form>
     );
   }
 
-
-  
 Recuperacion.propTypes = {
   onSubmit: PropTypes.func,
 }
