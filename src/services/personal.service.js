@@ -11,7 +11,7 @@ function show_id(PersonalId) {
 }
 
 function borrarPersonal(id) {
-    return api.delete(`${basePath}/`, id);
+    return api.delete(`${basePath}/${id}`);
   }
 
 function create(data) {
